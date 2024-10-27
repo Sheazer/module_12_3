@@ -15,21 +15,21 @@ class TournamentTest(unittest.TestCase):
         self.runner_2 = mod.Runner('Andrey', 9)
         self.runner_3 = mod.Runner('Nick', 3)
 
-    @unittest.skipIf(is_frozen, 'есты в этом кейсе заморожены')
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test1(self):
         go = mod.Tournament(90, self.runner_1, self.runner_3)
         end = go.start()
         self.assertTrue(end[2] == 'Nick')
         self.__class__.alls_results['1й забег'] = end
 
-    @unittest.skipIf(is_frozen, 'есты в этом кейсе заморожены')
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test2(self):
         go = mod.Tournament(90, self.runner_2, self.runner_3)
         end = go.start()
         self.assertTrue(end[2] == 'Nick')
         self.__class__.alls_results['2й забег'] = end
 
-    @unittest.skipIf(is_frozen, 'есты в этом кейсе заморожены')
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test3(self):
         go = mod.Tournament(90, self.runner_1, self.runner_2, self.runner_3)
         end = go.start()
@@ -49,7 +49,7 @@ class RunnerTest(unittest.TestCase):
     is_frozen = False
 
 
-    @unittest.skipIf(is_frozen, 'YES')
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_walk(self):
         runner = mod.Runner('Erzhan')
         for _ in range(10):
@@ -57,7 +57,7 @@ class RunnerTest(unittest.TestCase):
         self.assertEqual(runner.distance, 50)
 
 
-    @unittest.skipIf(is_frozen, 'YES')
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_run(self):
         runner = mod.Runner('Erzhan')
         for _ in range(10):
@@ -65,7 +65,7 @@ class RunnerTest(unittest.TestCase):
         self.assertEqual(runner.distance, 100)
 
 
-    @unittest.skipIf(is_frozen, 'YES')
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_challenge(self):
         first_runner = mod.Runner("Vova")
         secont_runner = mod.Runner('Petya')
